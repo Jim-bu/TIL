@@ -1,5 +1,6 @@
 # 목차
-1. [깨끗한 코드](#git-활용)
+- [목차](#목차)
+- [git 활용](#git-활용)
 
 # git 활용
 
@@ -22,6 +23,7 @@
 
 4. git version
    ```bash
-   git add 
+   git add . # 현 상황 전체 변동사항 추가
+   git commit -m 파일 이름
    ```
 
