@@ -44,8 +44,4 @@
    때문에 상황에 따라 체크 여부 판단
    ```
  - push 성공 terminal
-![](./gitpractice.PNG)
-<p align="center"><img src="image_src"></p>
-
-
-
+<p align="center"><img src="./gitpractice.PNG"></p>
