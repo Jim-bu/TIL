@@ -43,7 +43,9 @@
    README 파일은 commit을 하나 사용하기 때문에 로컬에서 미리 작업한 사항과 충돌이 발생할 수 있음.
    때문에 상황에 따라 체크 여부 판단
    ```
-- push 성공 terminal
-![](./0711til.PNG)
+ - push 성공 terminal
+![](./gitpractice.PNG)
+<p align="center"><img src="image_src"></p>
+
 
 
