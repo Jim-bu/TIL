@@ -1,6 +1,6 @@
-- [git 파일 수정](#git-파일-수정)
+- [git 수정](#git-수정)
 
-# git 파일 수정
+# git 수정
 
 ## git rivert
 1. git revert란
@@ -67,3 +67,20 @@ git 저장소에 commit이 없는 경우, Staging Area에서 Working Directory�
 git 저장소에 commit이 있을 경우, Staging Area에서 Working Directory로 되돌리기
 - commit까지 한 상태에서 add한 파일 unstage하는 방법
 ```
+
+## commit 메시지 수정
+```bash
+git commit --amend # 바로 직전 생성한 commit 메시지 수정
+                   # 메시지뿐 아니라 commit ID까지 수정됨.
+
+```
+ - 수정 vim editor
+![](./amendEG.PNG)
+
+## commit 전체 수정
+```bash
+git commit --amend # 바로 직전 생성한 commit에서 빠진 파일 수정
+                   # 빠진 내용 commit을 우선 Staging Area에 올리고 메시지 수정이 없다면 바로 :wq로 저장 후 vim editor 종료
+```
+- commit 중 파일 누락 상황
+![](./amendEG2.PNG)
