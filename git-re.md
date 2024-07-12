@@ -1,4 +1,4 @@
-- [git revert & reset](#git-파일-수정)
+- [git 파일 수정](#git-파일-수정)
 
 # git 파일 수정
 
