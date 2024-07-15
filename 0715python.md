@@ -197,7 +197,7 @@ print(len(password))
 
 first_char = password[28:36]
 second_word = password[113:118]
-third_word = password[68:65:-1]
+third_word = password[68:65:-1]  # [::-1] 을 통해 문자열의 순서를 거꾸로 할 수 있다.
 fourth_word = password[322:326:-1]
 fifth_word = password[365:372]
 
