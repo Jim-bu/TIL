@@ -61,6 +61,21 @@
 |          `\’`        	|     작은 따옴표    	|
 |          `\"`        	|     큰   따옴표    	|
 
+#### String Interpolation
+- 문자열 내에 변수나 표현식을 삽입하는 방법
+
+##### *중요 f-string
+- 문자열에 `f` 또는 `F` 접두어를 붙이고 표현식을 `{expression}`로 작성하는 문법
+- 문자열에 파이썬 표현식의 값을 삽입할 수 있음
+
+```python 
+bugs = 'roaches'
+counts = 13
+area = 'living room'
+
+# Debugging roaches 13 living room
+print(f'Debugging {bugs} {counts} {area}')
+```
 
 ##### 인덱스 `index`
 - 시퀀스 내의 값들에 대한 고유한 번호로, 각 값의 위치를 식별하는 데 사용되는 숫자
