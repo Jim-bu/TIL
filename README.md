@@ -1,6 +1,6 @@
 # 목차
-[open AI 활용](#open-ai-활용)
-[git ](#git)
+[open AI 활용](#open-ai-활용)   
+[git ](#git)   
 [numeric & sequence](#numeric--sequence)
 
 
