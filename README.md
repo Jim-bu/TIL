@@ -8,3 +8,4 @@
 # open AI 활용
 # git 활용
 # git 수정
+# python numeric & sequence
