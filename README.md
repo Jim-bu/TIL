@@ -15,4 +15,4 @@
 - [numeric & sequence](https://github.com/Jim-bu/TIL/blob/master/python1.md)
 
 # function
-- [function]()
+- [function](https://github.com/Jim-bu/TIL/blob/master/function.md)
