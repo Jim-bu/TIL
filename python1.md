@@ -1,4 +1,4 @@
-- [python numeric \& Text sequence](#python-numeric--text-sequence)
+- [python numeric & Text sequence](#python-numeric--text-sequence)
       - [산술 연산자](#산술-연산자)
 
 # python numeric & Text sequence
