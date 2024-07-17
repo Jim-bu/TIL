@@ -2,7 +2,7 @@
 [open AI 활용](#open-ai-활용)   
 [git ](#git)   
 [numeric & sequence](#numeric--sequence)
-[function](#-function)
+[function](#function)
 
 # open AI 활용
 - [open AI 활용](https://github.com/Jim-bu/TIL/blob/master/openAI.md)
