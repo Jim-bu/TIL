@@ -1,6 +1,6 @@
-- [function](#-function)
-  - [패킹 & 언패킹](#-패킹-&-언패킹)
-  - [실습 문제](#-실습)
+- [function](#function)
+  - [패킹 & 언패킹](#패킹--언패킹)
+  - [실습 문제](#실습)
   
 # function
 ## 함수 `Functions`
