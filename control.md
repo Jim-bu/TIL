@@ -2,6 +2,7 @@
   - [조건문](#조건문-conditional-statement)
   - [반복문](#반복문-loop-statement)
   - [enumerate-&-append](#참고_enumerate--append)
+  - [실습](#실습)
 
 # Control of flow
 
@@ -469,4 +470,128 @@ list.append(4)
 
 # 리스트 출력
 print(list)
+```
+
+#### 실습
+```python
+black_list = [
+    'Hoeger LLC',
+    'Keebler LLC',
+    'Yost and Sons',
+    'Johns Group',
+    'Romaguera-Crona',
+]
+
+
+import requests
+from pprint import pprint
+
+dummy_data = []
+for i in range(1,11):
+    API_URL = f'https://jsonplaceholder.typicode.com/users/{i}' 
+    response = requests.get(API_URL)
+    parsed_data = response.json()
+
+    user_info = {}
+    user_info['name'] = parsed_data['name']
+    user_info['lat'] = parsed_data['address']['geo']['lat']
+    user_info['lng'] = parsed_data['address']['geo']['lng']
+    user_info['company'] = parsed_data['company']['name']
+
+    if -80 < float(user_info['lat']) < 80:
+        if -80 < float(user_info['lng']) < 80:
+            dummy_data.append(user_info)
+
+
+def censorship(k, v):
+    if k in black_list:
+        print(f'{k} 소속의 {v} 은/는 등록할 수 없습니다.')
+        return False
+    else:
+        print(f'이상 없습니다.')
+        return True
+
+
+def create_user(user_info):
+    
+    
+    censored_user_list = {}
+    for i in range(len(user_info)):
+        k= user_info[i]['company']
+        v= user_info[i]['name']
+        if censorship(k, v) == True:
+            censored_user_list[k] = [v]
+    return censored_user_list
+
+
+    
+  
+print(create_user(dummy_data))
+```
+```python
+food_list = [
+    {
+        '종류': '한식',
+        '이름': '잡채'
+    },
+    {
+        '종류': '채소',
+        '이름': '토마토'
+    },
+    {
+        '종류': '중식',
+        '이름': '자장면'
+    },
+]
+
+# 아래에 코드를 작성하시오.
+for food in food_list:
+    if food['이름'] == '토마토':
+        food['종류'] = '과일'
+    elif food['이름'] == '자장면':
+        print('자장면엔 고춧가루지')
+    print(f'{food["이름"]} 은/는 {food["종류"]} (이)다.')
+print(food_list)
+
+food = 0
+while food < len(food_list):
+        if food_list[food]['이름'] == '토마토':
+            food_list[food]['종류'] = '과일'
+        elif food_list[food]['이름'] == '자장면':
+            print('자장면엔 고춧가루지')
+
+        print(f'{food_list[food]["이름"]} 은/는 {food_list[food]["종류"]} (이)다.')
+        food += 1
+print(food_list)
+
+```
+```python
+matrix = [
+        ['0, 1', '0, 2', '0, 3'], 
+        ['1, 0', '1, 1', '1, 2', '1, 3'], 
+        ['2, 0', '2, 1', '2, 2', '2, 3', '2, 4'], 
+        ['3, 0', '3, 1'], 
+        ['4, 0', '4, 1', '4, 2'], 
+        ['5, 0']
+    ]
+# 아래애 코드를 작성하시오.
+
+matrix_len = 0
+for i in matrix:
+    matrix_len += 1
+print(matrix_len)    
+for number in matrix:
+    temporary_len = 0
+    for i in range(matrix_len):
+        temporary_len += 1
+    print(f'{number} 리스트는 {temporary_len}개 만큼 요소를 가지고 있습니다.')
+
+
+
+
+for x in range(len(matrix)):
+    for y in range(len(matrix[x])):
+        
+        print(f'matrix의 {x}, {y} 번째 요소의 값은 {matrix[x][y]}입니다.')
+
 ```
