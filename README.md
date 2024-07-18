@@ -16,7 +16,7 @@
 - [git 수정](https://github.com/Jim-bu/TIL/blob/master/git-re.md)
 
 # 모듈 활용
-- [Module 활용](https://github.com/Jim-bu/TIL/blob/master/mudule.md)
+- [Module 활용](https://github.com/Jim-bu/TIL/blob/master/module.md)
 
 # numeric & sequence
 - [numeric & sequence](https://github.com/Jim-bu/TIL/blob/master/python1.md)
