@@ -29,7 +29,7 @@
 - [control](https://github.com/Jim-bu/TIL/blob/master/control.md)
 
 # 데이터구조(메서드)
-- [데이터 구조]()
+- [데이터 구조](https://github.com/Jim-bu/TIL/blob/master/Data%20Structure.md)
 
 # 복사
-- [Copy]()
+- [Copy](https://github.com/Jim-bu/TIL/blob/master/copy.md)
