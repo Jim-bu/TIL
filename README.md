@@ -1,11 +1,12 @@
 # 목차
-[open AI 활용](#open-ai-활용)   
-[git ](#git)   
-[module 활용](#모듈-활용)
-[numeric & sequence](#numeric--sequence)   
-[function](#function)   
-[control](#controlfor문-if문)    
-
+[Open AI 활용](#open-ai-활용)   
+[Git ](#git)   
+[Module 활용](#모듈-활용)
+[Numeric & Sequence](#numeric--sequence)   
+[Function](#function)   
+[Control](#controlfor문-if문)     
+[Data Structure](#데이터구조메서드)    
+[Copy](#복사)    
 
 
 # open AI 활용
@@ -26,3 +27,9 @@
 
 # control(for문, if문...)
 - [control](https://github.com/Jim-bu/TIL/blob/master/control.md)
+
+# 데이터구조(메서드)
+- [데이터 구조]()
+
+# 복사
+- [Copy]()
