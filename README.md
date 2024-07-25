@@ -8,7 +8,9 @@
 [Control](#controlfor문-if문)     
 [Data Structure](#데이터구조메서드)    
 [Copy](#복사)    
-[Classes](#클래스)
+[Classes](#클래스)    
+[error&exception](#에러와-예외)
+
 
 # open AI 활용
 - [open AI 활용](https://github.com/Jim-bu/TIL/blob/master/openAI.md)
@@ -37,3 +39,6 @@
 
 # 클래스
 - [classes](https://github.com/Jim-bu/TIL/blob/master/classes.md)
+
+# 에러와 예외
+- [error&exception]()
