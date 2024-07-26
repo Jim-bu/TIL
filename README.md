@@ -1,5 +1,6 @@
 # 목차
 - [기초 연습](https://github.com/Jim-bu/TIL/tree/master/Practice)    
+- [PJT 연습]()
 [Open AI 활용](#open-ai-활용)   
 [Git ](#git)   
 [Module 활용](#모듈-활용)

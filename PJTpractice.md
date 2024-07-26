@@ -151,3 +151,43 @@ pprint(response)
 
 - 데이터 시각화
     - Matplotlib : 그래프를 그려주는 패키지  | PYPI.org
+
+##### 도전과제 내용
+```python
+# CSV 파일 경로
+csv_path = "C:/Users/SSAFY/Desktop/PJT/pjt/pjt02/버전1_금융/archive/NFLX.csv"
+# copy file path를 이용하면 경로가 '\' 로 표기되기 때문에 '/'로 바꿔줘야 돌아감
+
+# CSV 파일 읽어오기 (첫 번째, 마지막 열 제외)
+df = pd.read_csv(csv_path, usecols=range(0,5))
+
+# 'Date' 컬럼을 datetime 형식으로 변환
+df['Date'] = pd.to_datetime(df['Date'])
+
+# 2021년 데이터만 필터링
+df_2021 = df[df['Date'].dt.year >= 2021]
+
+# 그래프에 그리드를 추가하여 시각적으로 보기 좋게 만듭니다.
+plt.grid(True)
+
+# 'Close' 컬럼의 최고값과 최저값 계산_내장함수 max, min
+max_close = df_post_2021['Close'].max()
+min_close = df_post_2021['Close'].min()
+
+# 월별로 그룹화하여 'Close' 컬럼의 평균값 계산
+df_monthly_avg = df_post_2021.groupby(df['Date'].dt.to_period('M')).agg({'Close': 'mean'})
+# 그룹화 후 인덱스 리셋
+df_monthly_avg = df_monthly_avg.reset_index()
+# 'Date' 컬럼을 문자열로 변환
+df_monthly_avg['Date'] = df_monthly_avg['Date'].astype(str)
+
+# strfrtime 사용해서 평균 계산 시 astype(str)과 reset_indexing을 하지 않아도 된다.
+df_monthly_avg = df_post_2021.groupby(df_post_2021['Date'].dt.strftime("%Y-%m")).mean()
+
+
+# 범례 설정을 위해 plot에서 라벨링을 해줘야 범례가 등장한다.
+plt.plot(df_post_2022['Date'], df_post_2022['High'], label = 'High')
+plt.plot(df_post_2022['Date'], df_post_2022['Low'], label = 'Low')
+plt.plot(df_post_2022['Date'], df_post_2022['Close'], label = 'Close')
+plt.legend()
+```
