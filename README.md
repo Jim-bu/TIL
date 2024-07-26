@@ -1,6 +1,6 @@
 # 목차
 - [기초 연습](https://github.com/Jim-bu/TIL/tree/master/Practice)    
-- [PJT 연습]()
+- [PJT 연습](https://github.com/Jim-bu/TIL/blob/master/PJTpractice.md)    
 [Open AI 활용](#open-ai-활용)   
 [Git ](#git)   
 [Module 활용](#모듈-활용)
@@ -42,4 +42,4 @@
 - [classes](https://github.com/Jim-bu/TIL/blob/master/classes.md)
 
 # 에러와 예외
-- [error&exception]()
+- [error&exception](https://github.com/Jim-bu/TIL/blob/master/error-except.md)
