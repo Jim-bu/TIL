@@ -143,3 +143,25 @@ def fibo(n):
 ```python
 f(i,N) # i는 접근할 원소 인덱스, N은 크기
 ```
+
+## Memoization
+- 메모이제이션은 컴퓨터 프로그램을 실행할 때 이전에 계산한 값을 메모리에 저장해서 매번 다시 계산하지 않도록 하여 전체적인 실행속도를 빠르게 하는 기술
+- 동적 계획법의 핵심이 되는 기술
+- memoization은 글자 그대로 해석하면 메모리에 넣기(to put in memory)라는 의미.
+
+- 값에 대해 계산하자마자 저장하면, $$\theta(n) 만큼실행시간을 줄일 수 있다.$$
+
+```python
+# memo를 위한 배열을 할당하고, 모두 0으로 초기화 한다.
+# memo[0]을 0으로 memo[1]는 1로 초기화 한다.
+
+def fibo1(n):
+  global memo
+  if n >= 2 and memo[n] == 0:
+    memo[n] = fibo1(n-1) + fibo1(n-2)
+  return memo[n]
+
+memo = [0]*(n+1)
+memo[0] = 0
+memo[1] = 1
+```
