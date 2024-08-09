@@ -66,3 +66,90 @@ def checknode(v): # node
         checknode(u)
  ```
  ![alt text](image-35.png)
+
+ ## 부분집합
+ - 어떤 집합의 공집합과 자기자신을 포함한 모든 부분집합을 powerset이라고 하며 구하고자 하는 어떤 집합의 원소 개수가 n일 경우 부분집합의 개수는 2^n개다.
+
+ - 백트래킹 기법으로 powerset 만들기
+  - n개의 원소가 들어있는 집합의 2^n개의 부분집합을 만들 때는, true 또는 false값을 가지는 항목들로 구성된 n개의 배열을 만드는 방법을 이용
+  - 배열의 i번쨰 항목은 i번쨰의 원소가 부분집합의 값인지 아닌지를 나타내는 값이다.
+  ![alt text](image-36.png)
+
+- 각 원소가 부분집합에 포함되었는지를 loop를 이용해 확인하고 부분집합 생성법
+```python
+bit = [0, 0, 0, 0]
+for i in range(2):
+  bit[0] = i            # 0번째 원소
+  for j in range(2):
+    bit[1] = j          # 1번째 원소
+    for k in range(2):
+      bit[2] = k        # 2번째 원소
+      for l in range(2):
+        bit[3] = l      # 3번째 원소
+        print(bit)      # 생성된 부분집합 출력
+```
+
+```python
+def backtrack(a, k, n):   # a 주어진 배열, k 결정할 원소, n 원소 개수
+  c = [0]*MAXCANDIDATES
+
+  if k ==n:
+    proocess_solution(a,k) # 답이면 원하는 작업을 한다.
+  else:
+    ncandidates = construct_candidates(a, k, n, c)
+    for i in range(ncandidates):
+      a[k] = c[i]
+      backtrack(a, k+1), n
+
+def construct_candidates(a, k, n, c):
+  c[0] = True
+  c[1] = False
+  return 2
+
+def process_solution(a, k):
+  for i in range(k):
+    if a[i]:
+      print(num[i], end = ' ')
+  print()
+
+MAXCANDIDATES = 2
+NMAX = 4
+a = [0]*NMAX
+num = [1,2,3,4]
+backtrack(a,0,3)
+```
+
+## 가지치기
+
+```python
+def f(i, K):  # bit[i]를 결정하는 함수
+  if i == K:  # 모든 원소에 대해 결정하면
+    sum_a = 0     # 부분집합의 합을 저장할 변수
+    for j in range(K):
+      if bit[j]:  # bit[j]가 0이 아니면
+        # print(a[j], end = ' ')  # 모든 원소 출력
+        s += a[j]
+    print(' : ', s)       # 부분집합을 한 행에 표시
+  else:
+    # bit[i] = 1
+    # f(i+1, K)
+    # bit[i] = 0
+    # f(i+1, K)
+    for j in [1, 0]:
+      bit[i] = j
+      f(i+1, K)
+  
+
+N = 3
+a = [1,2,3]   # 주어진 원소의 집합
+bit = [0]*N   # 원소의 포함여부를 표시하는 배열
+
+f(0, N)       # N개의 원소에 대해 부분집합을 만드는 함수
+```
+
+![alt text](image-37.png)
+
+- 추가 고려사항![alt text](image-37.png)
+
+### 순열
+![alt text](image-39.png)![alt text](image-40.png)![alt text](image-41.png)
