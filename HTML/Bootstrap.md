@@ -50,3 +50,50 @@
 - 커스터마이징이 용이
 - 크로스 브라우징 지원
   - 모든 주요 브라우저에서 작동하도록 설계되어 있음
+
+# emmet 기술 - 빠른 작성을 위한 팁  
+  div.contatiner
+  ul>li*3
+  - emmet 기술
+  - https://docs.emmet.io/cheat-sheet/
+
+
+### Bootstrap Grid system
+- **웹 페이지의 레이아웃을 조정하는 데 사용되는 12개의 컬럼으로 구성된 시스템**
+  - 12개인 이유
+    1. 약수가 많다.
+    2. 동시에 적당히 큰 수
+
+- Grid System 목적
+  - 반응형 디자인을 지원해 웹 페이지를 모바일, 태블릿, 데스크탑 등 다양한 기기에서 적절하게 표시할 수 있도록 도움
+![alt text](image-24.png)![alt text](image-25.png)![alt text](image-26.png)![alt text](image-27.png)
+
+
+##### gutters
+![alt text](image-28.png)
+
+### 반응형 웹 디자인 - Responsive Web Design
+- 디바이스 종류나 화면 크기에 상관없이 어디서든 일관된 레이아웃 및 사용자 경험을 제공하는 디자인
+
+#### Grid system breakpoints
+- 12개의 column과 6개 breakpoints를 사용하여 반응형 웹 디자인을 구현
+- 웹 페이지를 다양한 화면 크기에서 적절하게 배치하기 위한 분기점
+  - 화면 너비에 따라 6개의 분기점 제공(xs, sm, md, lg, xl, xxl)
+![alt text](image-29.png)
+
+
+### CSS Layout 종합 정리
+- 어떤 레이아웃 기술이 사용됐는지 생각해보기 
+1. Grid system
+2. Flexbox
+3. Position
+
+
+## UX &UI
+## UX(User Experience)
+- 제품이나 서비스를 사용하는 사람들이 느끼는 전체적인 경험과 만족도를 개선하고 최적화하기 위한 디자인과 개발 분야
+
+## UI(User Interface)
+- 서비스와 사용자 간의 상호작용을 가능하게 하는 디자인 요소들을 개발하고 구현하는 분야
+  - 리모컨, ATM, 웹 사이트
+![alt text](image-30.png)
