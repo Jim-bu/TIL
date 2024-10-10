@@ -212,3 +212,153 @@ SQL을 구성하는 가장 기본적인 코드 블록
 6. 정렬하고 (ORDER BY)
 7. 특정 위치의 값을 가져옴 (LIMIT)
 
+
+# Managing Tables
+
+### CREATE TABLE statement
+테이블 생성
+![alt text](image-17.png)
+- 각 필드에 적용할 데이터 타입 작성
+- 테이블 및 필드에 대한 제약조건(constraints) 작성
+
+
+### PRAGMA
+- 테이블 schema(구조) 확인
+![alt text](image-18.png)
+- "cid"
+  - Column ID를 의미하며 각 컬럼의 고유한 식별자는 나타내는 정수 값
+  - 직접 사용하지 않으며 PRAGMA 명령과 같은 메타데이터 조회에서 출력 값으로 활용됨
+
+### SQLite 데이터 타입
+1. NULL
+  - 아무런 값도 포함하지 않음
+2. INTEGER
+  - 정수
+3. REAL
+  - 부동 소수점
+4. TEXT
+  - 문자열
+5. BLOB
+  - 이미지, 동영상, 문서 등의 바이너리 데이터
+
+### Constraints 제약 조건
+테이블의 필드에 적용되는 규칙 또는 제한 사항
+- 데이터의 무결성을 유지하고 데이터베이스의 일관성을 보장
+
+#### 대표 제약조건 3가지
+- PRIMARY KEY
+  - 해당 필드를 기본 키로 지정
+  - **INTEGER 타입에만 적용, INT, BIGINT 등과 같은 다른 정수 유형은 적용되지 않음
+- NOT NULL
+  - 해당 필드에 NULL 값을 허용하지 않도록 지정
+- FOREIGN KEY
+  - 다른 테이블과의 외래 키 관계를 정의
+
+### AUTOINCREMENT keyword
+자동으로 고유한 정수 값을 생성하고 할당하는 필드 속성
+- 필드의 자동 증가를 나타내는 특수한 키워드
+- 주로 primary key 필드에 적용
+- INTEGER PRIMARY KEY AUTOINCREMENT가 작성된 필드는 항상 새로운 레코드에 대해 이전 최대 값보다 큰 값을 할당
+- 삭제된 값은 무시되며 재사용할 수 없게 됨
+
+# Modifying table fields
+## ALTER TABLE statement
+테이블 및 필드 조작
+![alt text](image-19.png)
+
+1. ALTER TABLE ADD COLUMN syntax
+![alt text](image-20.png)
+- ADD Column 키워드 이후 추가하고자 하는 새 필드 이름과 데이터 타입 및 제약 조건 작성
+- 단, 추가하고자 하는 필드에 NOT NULL 제약조건이 있을 경우 NULL이 아닌 기본 값 설정 필요
+- 테이블 생성시 정의한 필드는 기본 값이 없어도 NOT NULL 제약조건으로 생성되며 내부적으로 Default value는 NULL로 설정됨
+- SQLITE는 단일 문을 사용하여 한 번에 여러 필드를 추가할 수 없음
+
+2. ALTER TABLE RENAME COLUMN syntax
+![alt text](image-22.png)
+- RENAME COLUMN 키워드 뒤에 이름을 바꾸려는 필드의 이름을 지정하고 TO 키워드 뒤에 새 이름을 지정
+
+3. ALTER TABLE DROP COLUMN syntax
+![alt text](image-23.png)
+- DROP COLUMN 키워드 뒤에 삭제할 피드 이름 지정
+
+4. ALTER TABLE RENAME TO syntax
+![alt text](image-24.png)
+- RENAME TO 키워드 뒤에 새로운 테이블 이름 지정
+
+### DROP TABLE statement
+테이블 삭제
+
+
+## 타입 선호도 (Type Affinity)
+컬럼에 데이터 타입이 명시적으로 지정되지 않았거나 지원하지 않을 때 SQLite가 자동으로 데이터 타입을 추론하는 것
+- 목적
+1. 유연한 데이터 타입 지원
+   - 데이터 타입을 명시적으로 지정하지 않고도 데이터를 저장하고 조회할 수 있음
+   - 컬럼에 저장되는 값의 특성을 기반으로 데이터 타입을 유추
+2. 간편한 데이터 처리
+   - INTEGER Type Affinuty를 가진 열에 문자열 데이터를 저장해도 SQLite는 자동으로 숫자로 변환하여 처리
+3. SQL 호환성
+   - 다른 데이터베이스 시스템과 호환성을 유지
+
+## 반드시 NOT NULL 제약을 사용해야 하진 않다.
+- 하지만 데이터베이스를 사용하는 프로그램에 따라 NULL을 저장할 필요가 없는 경우가 많으므로 대부분 NOT NULL을 정의
+- "값이 없다."라는 표현을 테이블에 기록하는 것은 "0"이나 "빈 문자열"등을 사용하는 것으로 대체하는 것을 권장
+
+# Modifying Data - DML
+### INSERT statement
+테이블 레코드 삽입
+
+![alt text](image-25.png)
+- INSERT INTO 절 다음에 테이블 이름과 괄호 안에 필드 목록 작성
+- VALUES 키워드 다음 괄호 안에 해당 필드에 삽입할 값 목록 작성
+
+### UPDATE statement
+테이블 레코드 수정
+![alt text](image-26.png)
+- SET 절 다음에 수정할 필드와 새 값을 지정
+- WHERE 절에서 수정할 레코드를 지정하는 조건 작성
+- WHERE 절을 작성하지 않으면 모든 레코드를 수정
+
+### DELETE statement
+테이블 레코드 삭제
+![alt text](image-27.png)
+- DELETE FROM 절 다음에 테이블 이름 작성
+- WHERE 절에서 삭제할 레코드를 지정하는 조건 작성
+- WHERE 절을 작성하지 않으면 모든 레코드를 삭제
+
+![alt text](image-28.png)
+
+
+# Multi tabe queries
+
+## 관계
+여러 테이블 간의 (논리적) 연결
+
+## Join
+- 테이블을 분리하면 데이터 관리는 용이해질 수 있으나 출력시에는 문제가 있음
+- 테이블 한 개만을 출력할 수 밖에 없어 다른 테이블과 결합하여 출력하는 것이 필요
+- 이 때 사용하는 것이 'JOIN'
+
+### JOIN clause
+둘 이상의 테이블에서 데이터를 검색하는 방법
+
+### INNER JOIN clause
+두 테이블에서 값이 일치하는 레코드에 대해서만 결과를 반환
+![alt text](image-29.png)
+- FROM 절 이후 메인 테이블 지정 (table_a)
+- INNER JOIN 절 이후 메인 테이블과 조인할 테이블을 지정 (table_b)
+- ON 키워드 이후 조인 조건을 작성
+- 조인 조건은 table_a와 table_b 간의 레코드를 일치시키는 규칙을 지정
+
+
+### LEFT JOIN clause
+오른쪽 테이블의 일치하는 레코드와 함께 왼족 테이블의 모든 레코드 반환
+![alt text](image-30.png)
+- FROM 절 이후 메인 테이블 지정 (table_a)
+- LEFT JOIN 절 이후 오른쪽 테이블을 지정 (table_b)
+- ON 키워드 이후 조인 조건을 작성
+  - 왼쪽 테이블의 각 레코드를 오른쪽 테이블의 모든 레코드와 일치시킴
+
+- 특징
+  - 왼쪽 테이블의 모든 레코드를 표기
+  - 오른쪽 테이블과 매칭되는 레코드가 없으면 NULL을 표시
