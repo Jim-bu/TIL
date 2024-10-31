@@ -189,7 +189,7 @@ const dynamicId = ref('my-id')
 ```
 - Vue는 모든 데이터 바인딩 내에서 JavaScript 표현식의 모든 기능을 지원
 - Vue 템플릿에서 JavaScript 표현식을 사용할 수 있는 위치
-  1. 콧수염 구문 내ㅂ부
+  1. 콧수염 구문 내부
   2. 모든 directive의 속성 값("v-"로 시작하는 특수 속성)
 
 ### Expressions 주의사항
