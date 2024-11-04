@@ -12,7 +12,7 @@
 3. 유연성 및 성능
    - 작은 규모의 프로젝트부터 대규모의 애플리케이션까지 다양한 프로젝트에 적합
 4. 가장 주목받는 Client-side framework
-![alt text](image.png)
+![alt text](img/image.png)
 
 
 
@@ -37,7 +37,7 @@
 - 재사용 가능한 코드 블록
 - UI를 독립적이고 재사용 가능한 일부분으로 분할하고 각 부분을 개별적으로 다룰 수 있음
 - 자연스럽게 애플리케이션은 중첩된 Component의 트리 형태로 구성됨
-![alt text](image-2.png)
+![alt text](img/image-2.png)
 
 
 # Vue Application
@@ -90,7 +90,7 @@
   app.mount('#app')
 </script>
 ```
-![alt text](image-1.png)
+![alt text](img/image-1.png)
 
 
 ## 반응형 상태
@@ -165,7 +165,7 @@ const app = createApp({
 ```js
 const rawHtml = ref('<span style="color:red">This should be red.</span>')
 ```
-![alt text](image-3.png)
+![alt text](img/image-3.png)
 - 콧수염 구문은 데이터를 일반 텍스트로 해석하기 때문에 실제 HTML을 출력하려면 v-html을 사용해야 함
 3. Attribute Bingings
 ```html
