@@ -272,12 +272,10 @@ setup() {
 
 ## Vue Style Guide
 ### 우선순위
-<span style='background-color:#dcffe4'>
 - A : 필수 (Essential)
   - 오류를 방지하는 데 도움이 되므로 어떤 경우에도 규칙을 학습하고 준수
     1. v-for에 key작성
     2. 동일 요소에 v-if와 v-for 함꼐 사용하지 않기
-</span>
 - B : 적극 권장 (Strongly Recommended)
   - 가독성 및/또는 개발자 경험을 향상시킴
   - 규칙을 어겨도 코드는 여전히 실행되겠지만, 정당한 사유가 있어야 규칙을 위반할 수 있음
