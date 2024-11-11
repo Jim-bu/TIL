@@ -85,7 +85,7 @@ import ParentChild from '@/components/ParentChild.vue'
   </div>
 </template>
 ```
-![alt text](image.png)
+![alt text](props-emit/image.png)
 
 ## Props 선언
 - 부모 컴포넌트에서 내려보낸 props를 사용하기 위해서는 자식 컴포넌트에서 명시적인 props 선언이 필요
