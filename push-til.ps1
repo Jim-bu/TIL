@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
   오늘자 데일리(또는 이번 주 위클리) 기획 파일을 템플릿에서 생성하고 커밋·푸시한다.
 .EXAMPLE
@@ -8,7 +8,8 @@
 #>
 param(
     [switch]$Weekly,
-    [switch]$NoPush
+    [switch]$NoPush,
+    [switch]$CreateOnly   # 파일만 생성하고 git(커밋/푸시)은 건너뜀 — 자동 스케줄러용
 )
 
 $ErrorActionPreference = 'Stop'
@@ -63,6 +64,11 @@ else {
     $commitMsg = "planning(daily): $dateStr 스캐닝"
 }
 
+if ($CreateOnly) {
+    Write-Host "CreateOnly 모드: 파일만 생성하고 종료합니다." -ForegroundColor Cyan
+    exit 0
+}
+
 git add -A
 $staged = git diff --cached --name-only
 if (-not $staged) {
@@ -76,3 +82,4 @@ if (-not $NoPush) {
     git push
     Write-Host "푸시 완료." -ForegroundColor Green
 }
+
