@@ -1,45 +1,33 @@
-# 목차
-- [기초 연습](https://github.com/Jim-bu/TIL/tree/master/Practice)    
-- [PJT 연습](https://github.com/Jim-bu/TIL/blob/master/PJTpractice.md)    
-[Open AI 활용](#open-ai-활용)   
-[Git ](#git)   
-[Module 활용](#모듈-활용)
-[Numeric & Sequence](#numeric--sequence)   
-[Function](#function)   
-[Control](#controlfor문-if문)     
-[Data Structure](#데이터구조메서드)    
-[Copy](#복사)    
-[Classes](#클래스)    
-[error&exception](#에러와-예외)
+# 📚 TIL (Today I Learned)
 
+개발 공부와 기획 공부를 하루 단위로 기록하는 저장소.
 
-# open AI 활용
-- [open AI 활용](https://github.com/Jim-bu/TIL/blob/master/openAI.md)
+## 🗂️ 구조
+```
+TIL/
+├── dev/         # 개발 공부 (주제별 정리)
+└── planning/    # 기획 공부 (매일/매주 트렌드 스캐닝)
+```
 
-# git
-- [git 활용](https://github.com/Jim-bu/TIL/blob/master/git-practice.md)
-- [git 수정](https://github.com/Jim-bu/TIL/blob/master/git-re.md)
+## 💻 [dev/](./dev) — 개발 공부
+| 주제 | 폴더 |
+|------|------|
+| 알고리즘 / 자료구조 | [Algorithm](./dev/Algorithm), [APS](./dev/APS), [Graph](./dev/Graph), [Tree](./dev/Tree) |
+| Python | [python](./dev/python) |
+| Django / DRF | [Django](./dev/Django), [DRF](./dev/DRF) |
+| 프론트엔드 | [HTML](./dev/HTML), [Javascript](./dev/Javascript), [Vue](./dev/Vue) |
+| DB / Git | [DB](./dev/DB), [GIT](./dev/GIT) |
+| 기타 | [Practice](./dev/Practice), [start](./dev/start), [PJT 연습](./dev/PJTpractice.md) |
 
-# 모듈 활용
-- [Module 활용](https://github.com/Jim-bu/TIL/blob/master/module.md)
+## 📈 [planning/](./planning) — 기획 공부
+Product Hunt · GitHub Trending을 매일/매주 스캐닝하며 시장·기술 트렌드를 읽는 루틴.
+자세한 방법은 [planning/README.md](./planning/README.md) 참고.
 
-# numeric & sequence
-- [numeric & sequence](https://github.com/Jim-bu/TIL/blob/master/python1.md)
+- 📅 [daily/](./planning/daily) — 매일 10분 스캐닝
+- 🗓️ [weekly/](./planning/weekly) — 주말 30분 딥다이브
 
-# function
-- [function](https://github.com/Jim-bu/TIL/blob/master/function.md)
-
-# control(for문, if문...)
-- [control](https://github.com/Jim-bu/TIL/blob/master/control.md)
-
-# 데이터구조(메서드)
-- [데이터 구조](https://github.com/Jim-bu/TIL/blob/master/Data%20Structure.md)
-
-# 복사
-- [Copy](https://github.com/Jim-bu/TIL/blob/master/copy.md)
-
-# 클래스
-- [classes](https://github.com/Jim-bu/TIL/blob/master/classes.md)
-
-# 에러와 예외
-- [error&exception](https://github.com/Jim-bu/TIL/blob/master/error-except.md)
+## ⚡ 오늘 기록하기
+```powershell
+./push-til.ps1            # 오늘자 데일리 파일 생성 + 커밋 + 푸시
+./push-til.ps1 -Weekly    # 이번 주 위클리 파일 생성 + 커밋 + 푸시
+```
