@@ -1,12 +1,12 @@
 # 📚 TIL (Today I Learned)
 
-개발 공부와 기획 공부를 하루 단위로 기록하는 저장소.
+개발 공부와 **기술 트렌드 스캐닝**을 하루 단위로 기록하는 저장소.
 
 ## 🗂️ 구조
 ```
 TIL/
-├── dev/         # 개발 공부 (주제별 정리)
-└── planning/    # 기획 공부 (매일/매주 트렌드 스캐닝)
+├── dev/          # 개발 공부 (주제별 정리)
+└── tech-radar/   # 기술 트렌드 스캐닝 (Tech Radar) — 매일/매주
 ```
 
 ## 💻 [dev/](./dev) — 개발 공부
@@ -19,15 +19,11 @@ TIL/
 | DB / Git | [DB](./dev/DB), [GIT](./dev/GIT) |
 | 기타 | [Practice](./dev/Practice), [start](./dev/start), [PJT 연습](./dev/PJTpractice.md) |
 
-## 📈 [planning/](./planning) — 기획 공부
-Product Hunt · GitHub Trending을 매일/매주 스캐닝하며 시장·기술 트렌드를 읽는 루틴.
-자세한 방법은 [planning/README.md](./planning/README.md) 참고.
+## 📡 [tech-radar/](./tech-radar) — 기술 트렌드 스캐닝
+4개 소스(**Product Hunt · GitHub Trending · CNCF Blog · The New Stack**)를 매일 스캐닝하며
+*제품·기술·인프라·비즈니스*를 잇는 기술 레이더. 자세한 방법은 [tech-radar/README.md](./tech-radar/README.md).
 
-- 📅 [daily/](./planning/daily) — 매일 10분 스캐닝
-- 🗓️ [weekly/](./planning/weekly) — 주말 30분 딥다이브
+- 📅 [daily/](./tech-radar/daily) — 매일 기술 트렌드 스캔
+- 🗓️ [weekly/](./tech-radar/weekly) — 주간 딥다이브 종합
 
-## ⚡ 오늘 기록하기
-```powershell
-./push-til.ps1            # 오늘자 데일리 파일 생성 + 커밋 + 푸시
-./push-til.ps1 -Weekly    # 이번 주 위클리 파일 생성 + 커밋 + 푸시
-```
+**분석 축:** `Tech → Product` · `Product → Tech` · `Tech → Business`
